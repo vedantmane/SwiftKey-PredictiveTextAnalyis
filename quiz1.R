@@ -8,9 +8,9 @@ read <- readLines("./final/en_US/en_US.twitter.txt", skipNul = TRUE, encoding = 
 length(read)
 
 #Q3 Length of longest line in any of the three en_US data sets
-readBlogs <- readLines("./final/en_US/en_US.blogs.txt", skipNul = TRUE, encoding = "UTF-8")
-readNews <- readLines("./final/en_US/en_US.news.txt", skipNul = TRUE, encoding = "UTF-8")
-readTwitter <- readLines("./final/en_US/en_US.twitter.txt", skipNul = TRUE, encoding = "UTF-8")
+readBlogs <- readLines("./final/en_US/en_US.blogs.txt", skipNul = TRUE, encoding = "UTF-8", warn = FALSE)
+readNews <- readLines("./final/en_US/en_US.news.txt", skipNul = TRUE, encoding = "UTF-8", warn = FALSE)
+readTwitter <- readLines("./final/en_US/en_US.twitter.txt", skipNul = TRUE, encoding = "UTF-8", warn = FALSE)
 charsBlogs <- sapply(readBlogs, nchar)
 charsNews <- sapply(readNews, nchar)
 charsTwitter <- sapply(readTwitter, nchar)
