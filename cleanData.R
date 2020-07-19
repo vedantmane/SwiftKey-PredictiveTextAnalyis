@@ -19,7 +19,7 @@ chars_en <- sapply(list(readBlogs_en, readNews_en, readTwitter_en),nchar)
 newChars_en <- sapply(chars_en,sum)
 
 #Percentage of removed characters
-1 - as.integer(newChars_en) / as.integer(tab[3,])
+rmChars <- ave(1 - as.integer(newChars_en) / as.integer(tab[3,]))[1]
 
 #Sampling the huge dataset
 set.seed(123)
