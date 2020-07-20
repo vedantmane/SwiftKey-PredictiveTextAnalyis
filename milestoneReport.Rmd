@@ -33,8 +33,6 @@ require(RWeka)
 require(wordcloud)
 require(ggplot2)
 require(cowplot)
-require(knitr)
-require(rmarkdown)
 ```
 
 We know that we our process will require lot of computation time and so we will perform parallel computation of our tasks forming a cluster of cores.
