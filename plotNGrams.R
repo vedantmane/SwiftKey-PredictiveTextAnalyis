@@ -1,5 +1,5 @@
 require(ggplot2)
-plotU <- ggplot(data=dfU, aes(x=word, y=frequency,fill=frequency)) + 
+plotU <- ggplot(data=freqU[1:10,], aes(x=word, y=frequency,fill=frequency)) + 
     geom_bar(stat="identity")+guides(fill=FALSE)+
     theme(axis.text.x=element_text(angle=90))+
     scale_x_discrete(limits=dfU$word)+
@@ -17,4 +17,4 @@ plotT <- ggplot(data=dfT, aes(x=word, y=frequency,fill=frequency)) +
 plot_grid(plotU, plotB, plotT, nrow = 1, ncol = 3)
 
 set.seed(5)
-wordcloud(names(freqUni), freqUni, max.words = 100, scale = c(3, 0.1), colors = brewer.pal(8,"Dark2"))
+wordcloud(freqU$word, freqU$frequency, max.words = 200, scale = c(3, 0.1), colors = brewer.pal(8,"Dark2"))
